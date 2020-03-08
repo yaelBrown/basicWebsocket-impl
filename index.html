@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .wrapper {
+            margin: auto;
+            width: 40%;
+            text-align: center;
+        }
+
+        #yoda {
+            display: none;
+            margin: auto;
+            padding-top: 1em;
+        }
+    </style>
+    <title>Basic Websocket Implementation</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Basic Websocket Implementation</h1>
+        <p>Run server.py</p>
+        <p>Then press the button and check console</p>
+        <button onclick="runSocketExample()"><h3>Click me</h3></button><br>
+        <img src="img/babyyodasees.gif" id="yoda">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="client.js"></script>
+    <script>
+        const runSocketExample = () => {
+            socketClient();
+            showYoda();
+        }
+    </script>
+    <script>
+        // cheesey yoda script
+        const y = document.getElementById("yoda");
+        const showYoda = () => y.style.display = "block";
+    </script>
+</body>
+</html>
